@@ -6,7 +6,7 @@ def get_train_test_data(data_dir):
     # Get the train data
     train_data = pd.read_json(f"{data_dir}/train.json")
     train_data.drop(['id'], axis=1, inplace=True)
-
+    # print(train_data['summary'][:5])
     # Get the test data
     test_data = pd.read_json(f"{data_dir}/test.json")
     test_data.drop(['id'], axis=1, inplace=True)
